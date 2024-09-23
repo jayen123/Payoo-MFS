@@ -21,7 +21,7 @@
           <div class="artboard artboard-demo phone-3">
             <!-- Account Balance -->
             <div class="stats shadow">
-              <div class="stat">
+              <div class="stat text-center">
                 <div class="stat-title">Account Balance</div>
                 <div id="current-balance" class="stat-value">89400</div>
               </div>
@@ -38,7 +38,9 @@
             </div>
             <div class="divider"></div>
             <!-- Add Money Form -->
-            <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -94,14 +96,12 @@
                     type="password"
                     placeholder="Pin"
                     class="input input-bordered"
-                    id="input-pin"
+                    id="input-pin-cashOut"
                     required
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button id="cashOut" class="btn btn-primary">
-                    Cash Out
-                  </button>
+                  <button id="cashOut" class="btn btn-primary">Cash Out</button>
                 </div>
               </form>
             </div>
@@ -111,6 +111,7 @@
     </main>
     <footer></footer>
     <script src="js/utilities.js"></script>
+    <script src="js/cashOut.js"></script>
     <script src="js/addMoney.js"></script>
   </body>
 </html>
