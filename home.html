@@ -28,20 +28,30 @@
             </div>
             <div class="divider"></div>
             <!-- Features -->
-            <div>
-              <button id="add-money-form-button" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+            <div class="flex flex-wrap gap-3 max-w-sm">
+              <button
+                id="add-money-form-button"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+              >
                 Add Money
               </button>
-              <button 
-              id="cash-out-form-button"
-              class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+              <button
+                id="cash-out-form-button"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+              >
                 Cash Out
+              </button>
+              <button
+                id="transaction-history-button"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+              >
+                Transactions
               </button>
             </div>
             <div class="divider"></div>
             <!-- Add Money Form -->
             <div
-            id="add-money-form"
+              id="add-money-form"
               class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
             >
               <form class="card-body">
@@ -78,8 +88,9 @@
             </div>
             <!-- Cash oUt Form -->
             <div
-            id="cash-out-form"
-             class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -109,6 +120,11 @@
                   <button id="cashOut" class="btn btn-primary">Cash Out</button>
                 </div>
               </form>
+            </div>
+            <!-- Transactions History -->
+            <div id="transaction-history" class="hidden">
+              <h3>Transaction History</h3>
+              <div id="transaction-container"></div>
             </div>
           </div>
         </div>

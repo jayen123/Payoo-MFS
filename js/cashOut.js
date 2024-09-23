@@ -3,15 +3,27 @@ document.getElementById("cashOut").addEventListener("click", function (event) {
 
   const cashOutNumber = getInputValueByID("input-cash-Out");
   const pinNumber = getInputValueByID("input-pin-cashOut");
+  const currentBalance = getTextValueById("current-balance");
 
-  const currentBalance = document.getElementById("current-balance").innerText;
-  const currentBalanceNumber = parseFloat(currentBalance);
+  if (isNaN(cashOutNumber)) {
+    alert("Failed To Cash Out!");
+    return;
+  }
 
   if (pinNumber !== 1234) {
     alert("Failed to Cash out! please try again later");
   }
 
-  const newBalance = currentBalanceNumber - cashOutNumber;
+  if (cashOutNumber > currentBalance) {
+    alert("You Do not have enough Money!");
+    return;
+  }
 
-  document.getElementById("current-balance").innerText = newBalance;
+  const newBalance = currentBalance - cashOutNumber;
+
+  setNewBalance(newBalance);
+
+  const p = document.createElement("p");
+  p.innerText = `Cash Out ${cashOutNumber} tk. new Balance is ${newBalance}`;
+  createTransactionHistory(p);
 });
